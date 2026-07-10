@@ -4,23 +4,42 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Future University Leadership Lab | Academic Governance for the AI Era</title>
-<meta name="description" content="Chaired by Dr. Nikita Hari. Transforming higher education stewardship, executive intelligence, and institutional governance for an automated world.">
+<meta name="description" content="Founded by Dr. Nikita Hari, University of Oxford. Advising vice-chancellors, deans, and university boards on institutional governance, leadership, and stewardship in the age of AI.">
+
+<!-- Open Graph / LinkedIn share preview -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Future University Leadership Lab | Academic Governance for the AI Era">
+<meta property="og:description" content="Founded by Dr. Nikita Hari, University of Oxford. Advising university leadership on institutional governance in the age of AI.">
+<meta property="og:image" content="og-image.jpg">
+<meta property="og:url" content="https://futureuniversityleadershiplab.org">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Future University Leadership Lab | Academic Governance for the AI Era">
+<meta name="twitter:description" content="Founded by Dr. Nikita Hari, University of Oxford. Advising university leadership on institutional governance in the age of AI.">
+
+<!-- Favicon: navy circle, gold "FULL" mark, no external file needed -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='32' fill='%2314213D'/%3E%3Ctext x='32' y='40' font-family='Georgia,serif' font-size='16' font-weight='700' fill='%23F4B942' text-anchor='middle'%3EFULL%3C/text%3E%3C/svg%3E">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy:#0B1A33;
-    --navy-light:#1E2F4D;
-    --gold:#C9A24B;
-    --gold-bright:#E0BE6F;
-    --cream:#F7F4EE;
-    --ink:#10141C;
-    --ink-soft:#4A5161;
-    --line:rgba(201,162,75,0.25);
+    --navy:#14213D;
+    --navy-light:#1E3260;
+    --gold:#E07C3E;
+    --gold-bright:#F4B942;
+    --gold-dim:#D9A233;
+    --cream:#FFFFFF;
+    --ink:#14171F;
+    --ink-soft:#54596B;
+    --line:rgba(255,255,255,0.16);
   }
   *{box-sizing:border-box; margin:0; padding:0;}
   html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important;}
+  }
   body{
     background:var(--cream);
     color:var(--ink);
@@ -28,53 +47,55 @@
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3,.serif{font-family:'Fraunces', serif;}
+  .mono{font-family:'IBM Plex Mono', monospace;}
   a{color:inherit; text-decoration:none;}
   img{max-width:100%; display:block;}
   .wrap{max-width:1180px; margin:0 auto; padding:0 32px;}
 
-  /* Waveform signature */
-  .wave{display:flex; align-items:flex-end; gap:4px; height:18px;}
-  .wave span{width:3px; background:var(--gold); border-radius:2px;}
-  .wave.dark span{background:var(--gold-bright);}
+  /* Field-note signature mark — recurs as a section divider, echoes a research annotation */
+  .field-mark{display:flex; align-items:center; gap:14px; max-width:480px;}
+  .field-mark .tick{width:7px; height:7px; background:var(--gold-bright); transform:rotate(45deg); flex-shrink:0;}
+  .field-mark .label{font-family:'IBM Plex Mono',monospace; font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-bright); white-space:nowrap;}
+  .field-mark .rule{flex:1; height:1px; background:rgba(255,255,255,0.35);}
 
   /* NAV */
   header{
     position:sticky; top:0; z-index:50;
-    background:rgba(11,26,51,0.92);
+    background:rgba(20,33,61,0.92);
     backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(201,162,75,0.18);
+    border-bottom:1px solid rgba(255,255,255,0.18);
   }
   nav.wrap{display:flex; align-items:center; justify-content:space-between; padding:20px 32px;}
   .brand{display:flex; align-items:center; gap:10px;}
   .brand .mark{font-family:'Fraunces',serif; font-weight:700; font-size:1.4rem; color:var(--cream); letter-spacing:0.02em;}
-  .brand .tag{font-size:0.62rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold); margin-top:2px;}
+  .brand .tag{font-size:0.62rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--gold-bright); margin-top:2px;}
   .navlinks{display:flex; gap:34px; align-items:center;}
-  .navlinks a{font-size:0.85rem; font-weight:500; color:#D8DCE6; letter-spacing:0.01em; transition:color .2s;}
+  .navlinks a{font-size:0.85rem; font-weight:500; color:#C7CEE3; letter-spacing:0.01em; transition:color .2s;}
   .navlinks a:hover{color:var(--gold-bright);}
   .nav-cta{
-    background:var(--gold); color:var(--navy); padding:10px 20px; border-radius:2px;
+    background:var(--gold-bright); color:var(--navy); padding:10px 20px; border-radius:2px;
     font-weight:600; font-size:0.8rem; letter-spacing:0.04em; text-transform:uppercase;
     transition:background .2s;
   }
-  .nav-cta:hover{background:var(--gold-bright);}
+  .nav-cta:hover{background:var(--gold-dim);}
 
   /* HERO */
   .hero{
     background:
-      radial-gradient(ellipse at 80% 0%, rgba(201,162,75,0.16), transparent 55%),
-      linear-gradient(180deg, var(--navy) 0%, #0E2140 100%);
+      radial-gradient(ellipse at 80% 0%, rgba(255,255,255,0.16), transparent 55%),
+      linear-gradient(180deg, var(--navy) 0%, #28221A 100%);
     color:var(--cream);
-    padding:120px 0 100px;
+    padding:120px 0 0;
     position:relative;
     overflow:hidden;
   }
   .hero::after{
     content:"";
     position:absolute; inset:0;
-    background-image:repeating-linear-gradient(90deg, rgba(201,162,75,0.05) 0, rgba(201,162,75,0.05) 1px, transparent 1px, transparent 80px);
+    background-image:repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 80px);
     pointer-events:none;
   }
-  .hero-inner{position:relative; z-index:2; max-width:820px;}
+  .hero-inner{position:relative; z-index:2; max-width:820px; padding-bottom:64px;}
   .eyebrow{
     display:inline-flex; align-items:center; gap:10px;
     font-size:0.72rem; letter-spacing:0.22em; text-transform:uppercase;
@@ -88,38 +109,58 @@
     margin-bottom:8px;
   }
   .hero h1 em{font-style:italic; font-weight:500; color:var(--gold-bright);}
-  .hero-wave{margin:28px 0 30px;}
-  .hero-wave span{animation:bounce 1.8s ease-in-out infinite;}
-  .hero-wave span:nth-child(odd){animation-delay:.15s;}
-  .hero-wave span:nth-child(3n){animation-delay:.3s;}
-  @keyframes bounce{
-    0%,100%{height:6px;} 50%{height:24px;}
-  }
+  .hero .field-mark{margin:30px 0 34px;}
   .hero p.lede{
     font-size:1.15rem; line-height:1.65; color:#C3CADC; max-width:620px; margin-bottom:42px; font-weight:400;
   }
   .hero-actions{display:flex; gap:18px; flex-wrap:wrap;}
   .btn-primary{
-    background:var(--gold); color:var(--navy); padding:16px 30px; font-weight:600;
+    background:var(--gold-bright); color:var(--navy); padding:16px 30px; font-weight:600;
     font-size:0.88rem; letter-spacing:0.03em; text-transform:uppercase; border-radius:2px;
-    transition:transform .2s, background .2s; display:inline-block;
+    transition:transform .2s, background .2s; display:inline-block; border:none; cursor:pointer;
   }
-  .btn-primary:hover{background:var(--gold-bright); transform:translateY(-2px);}
+  .btn-primary:hover{background:var(--gold-dim); transform:translateY(-2px);}
   .btn-ghost{
-    border:1px solid rgba(247,244,238,0.35); color:var(--cream); padding:16px 30px;
+    border:1px solid rgba(255,255,255,0.35); color:var(--cream); padding:16px 30px;
     font-weight:500; font-size:0.88rem; letter-spacing:0.03em; text-transform:uppercase; border-radius:2px;
     transition:border-color .2s, background .2s;
   }
-  .btn-ghost:hover{border-color:var(--gold-bright); background:rgba(201,162,75,0.08);}
+  .btn-ghost:hover{border-color:var(--gold-bright); background:rgba(255,255,255,0.08);}
 
-  /* STAT BAR */
-  .stats{
-    background:var(--navy-light); color:var(--cream); padding:46px 0;
-    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  /* WHO THIS IS FOR — audience strip */
+  .audience{
+    position:relative; z-index:2; border-top:1px solid rgba(255,255,255,0.22);
+    background:rgba(8,18,36,0.55);
   }
-  .stats .wrap{display:grid; grid-template-columns:repeat(4,1fr); gap:20px; text-align:center;}
-  .stat .num{font-family:'Fraunces',serif; font-size:2.4rem; font-weight:600; color:var(--gold-bright);}
-  .stat .label{font-size:0.74rem; letter-spacing:0.1em; text-transform:uppercase; color:#A9B1C4; margin-top:6px;}
+  .audience .wrap{display:flex; flex-wrap:wrap; gap:0; padding:0;}
+  .audience-item{
+    flex:1 1 0; min-width:220px; padding:22px 28px;
+    border-right:1px solid rgba(255,255,255,0.18);
+    display:flex; align-items:center; gap:12px;
+  }
+  .audience-item:last-child{border-right:none;}
+  .audience-item .dot{width:6px; height:6px; border-radius:50%; background:var(--gold-bright); flex-shrink:0;}
+  .audience-item span.txt{font-size:0.86rem; color:#C7CEE3; font-weight:500; letter-spacing:0.01em;}
+
+  /* CREDENTIAL STRIP (replaces vanity stat bar) */
+  .credentials{
+    background:var(--navy-light); color:var(--cream); padding:44px 0;
+    border-bottom:1px solid var(--line);
+  }
+  .credentials .kicker{
+    display:block; text-align:center; font-size:0.68rem; letter-spacing:0.2em; text-transform:uppercase;
+    color:var(--gold-bright); font-weight:600; margin-bottom:26px;
+  }
+  .credentials .wrap{display:grid; grid-template-columns:repeat(4,1fr); gap:20px;}
+  .credential{text-align:center; padding:0 12px;}
+  .credential .name{font-family:'Fraunces',serif; font-size:1.02rem; font-weight:600; color:var(--cream); line-height:1.3;}
+  .credential .desc{font-size:0.72rem; letter-spacing:0.03em; text-transform:uppercase; color:#A9B2C8; margin-top:6px;}
+
+  /* RECOGNITION strip — third-party validation, distinct from the institutional credential row above */
+  .recognition{background:var(--cream); border-bottom:1px solid rgba(0,0,0,0.12); padding:18px 0;}
+  .recognition .wrap{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px; text-align:center;}
+  .recognition span{font-size:0.78rem; color:var(--ink-soft); letter-spacing:0.01em;}
+  .recognition .sep{color:var(--gold); opacity:0.6;}
 
   /* SECTION generic */
   section{padding:100px 0;}
@@ -143,10 +184,10 @@
   .programs{background:#fff;}
   .program-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
   .program-card{
-    background:var(--cream); border:1px solid rgba(11,26,51,0.08); border-radius:4px;
+    background:var(--cream); border:1px solid rgba(0,0,0,0.08); border-radius:4px;
     padding:38px 32px; position:relative; transition:transform .25s, box-shadow .25s;
   }
-  .program-card:hover{transform:translateY(-6px); box-shadow:0 18px 40px rgba(11,26,51,0.1);}
+  .program-card:hover{transform:translateY(-6px); box-shadow:0 18px 40px rgba(0,0,0,0.1);}
   .program-card .phase{
     font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:18px; display:block;
   }
@@ -160,103 +201,190 @@
     content:""; position:absolute; left:0; top:8px; width:6px; height:6px; background:var(--gold); border-radius:50%;
   }
 
+  /* HOW AN ENGAGEMENT WORKS */
+  .process{background:var(--cream);}
+  .process-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:0; border:1px solid rgba(0,0,0,0.1); border-radius:4px; overflow:hidden; background:#fff;}
+  .process-step{padding:38px 32px; border-right:1px solid rgba(0,0,0,0.08); position:relative;}
+  .process-step:last-child{border-right:none;}
+  .process-step .step-num{
+    font-family:'IBM Plex Mono',monospace; font-size:0.78rem; color:var(--gold); font-weight:500; margin-bottom:16px; display:block;
+  }
+  .process-step h3{font-size:1.15rem; color:var(--navy); margin-bottom:10px; font-weight:600;}
+  .process-step p{font-size:0.92rem; color:var(--ink-soft); line-height:1.55;}
+  .process-arrow{
+    display:none; position:absolute; right:-11px; top:38px; width:22px; height:22px; background:var(--cream);
+    border:1px solid rgba(0,0,0,0.1); border-radius:50%; z-index:2; align-items:center; justify-content:center;
+    font-size:0.7rem; color:var(--gold);
+  }
+
   /* DIRECTOR & FELLOWS */
   .founders{background:var(--navy); color:var(--cream);}
   .founders .section-head h2{color:var(--cream);}
-  .founders .section-head p{color:#A9B1C4;}
-  .founder-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  .founders .section-head p{color:#A9B2C8;}
+  .founders .section-head .kicker{color:var(--gold-bright);}
+  .founder-grid{display:grid; grid-template-columns:1.3fr 1fr; gap:28px;}
   .founder-card{
     background:var(--navy-light); border:1px solid var(--line); border-radius:4px; padding:34px 28px;
   }
+  .founder-card.lead{padding:0; overflow:hidden; display:flex; flex-direction:column;}
+  .founder-photo{
+    width:100%; aspect-ratio:4/3; background:linear-gradient(135deg, rgba(255,255,255,0.18), rgba(255,255,255,0.04));
+    display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;
+    border-bottom:1px solid var(--line);
+  }
+  .founder-photo img{width:100%; height:100%; object-fit:cover; display:none;}
+  .founder-photo .initial-fallback{
+    width:76px; height:76px; border-radius:50%; background:var(--gold-bright); color:var(--navy);
+    display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:700; font-size:1.7rem;
+  }
+  .founder-card.lead .founder-body{padding:28px 28px 32px;}
   .founder-card .initial{
-    width:56px; height:56px; border-radius:50%; background:var(--gold); color:var(--navy);
+    width:56px; height:56px; border-radius:50%; background:var(--gold-bright); color:var(--navy);
     display:flex; align-items:center; justify-content:center; font-family:'Fraunces',serif; font-weight:700; font-size:1.3rem; margin-bottom:20px;
   }
   .founder-card h3{font-size:1.15rem; font-weight:600; margin-bottom:4px;}
   .founder-card .role{font-size:0.78rem; color:var(--gold-bright); letter-spacing:0.04em; margin-bottom:14px; display:block;}
-  .founder-card p{font-size:0.9rem; color:#B8BFD0; line-height:1.6;}
+  .founder-card p{font-size:0.9rem; color:#A9B2C8; line-height:1.6;}
+  .founder-card .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:16px;}
+  .founder-card .tags span{
+    font-size:0.68rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--gold-bright);
+    border:1px solid rgba(255,255,255,0.35); padding:5px 10px; border-radius:2px;
+  }
 
   /* SINGLE PREMIUM VIDEO SLOT */
   .media{background:var(--cream);}
   .single-video-container{max-width:960px; margin:0 auto;}
   .video-feature{
-    background:var(--navy); border-radius:6px; position:relative; 
+    background:var(--navy); border-radius:6px; position:relative;
     aspect-ratio:16 / 9; width:100%; overflow:hidden;
-    box-shadow:0 24px 50px rgba(11,26,51,0.15); border:1px solid rgba(201,162,75,0.2);
+    box-shadow:0 24px 50px rgba(0,0,0,0.15); border:1px solid rgba(255,255,255,0.2);
   }
+  .video-feature video{width:100%; height:100%; object-fit:cover; display:none;}
+  .video-placeholder{
+    position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:18px; background:
+      radial-gradient(ellipse at 50% 30%, rgba(255,255,255,0.12), transparent 60%),
+      linear-gradient(180deg, var(--navy) 0%, #28221A 100%);
+    text-align:center; padding:24px;
+  }
+  .video-placeholder .play-ring{
+    width:72px; height:72px; border-radius:50%; border:1.5px solid rgba(255,255,255,0.5);
+    display:flex; align-items:center; justify-content:center;
+  }
+  .video-placeholder .play-ring::after{
+    content:""; width:0; height:0; margin-left:4px;
+    border-top:11px solid transparent; border-bottom:11px solid transparent; border-left:16px solid var(--gold-bright);
+  }
+  .video-placeholder .ph-label{font-family:'Fraunces',serif; font-size:1.25rem; color:var(--cream); font-weight:600;}
+  .video-placeholder .ph-sub{font-size:0.82rem; color:#8B93AC; max-width:380px; line-height:1.5;}
   .video-caption{
     position:absolute; bottom:0; left:0; right:0;
-    background:linear-gradient(0deg, rgba(11,26,51,0.9) 0%, rgba(11,26,51,0.4) 70%, transparent 100%);
-    padding:40px; color:var(--cream); z-index:2; pointer-events:none;
+    background:linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 70%, transparent 100%);
+    padding:40px; color:var(--cream); z-index:2; pointer-events:none; opacity:0; transition:opacity .3s;
   }
+  .video-caption.show{opacity:1;}
   .video-caption .kicker{color:var(--gold-bright); font-size:0.72rem; letter-spacing:0.16em; text-transform:uppercase; font-weight:600;}
   .video-caption h3{font-size:1.6rem; margin-top:8px; font-weight:600; letter-spacing:-0.01em;}
 
+  /* NETWORKING / QR SECTION */
+  .networking{background:#fff;}
+  .qr-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:640px;}
+  .qr-card{
+    border:1px solid rgba(0,0,0,0.1); border-radius:4px; padding:30px; text-align:center;
+    background:var(--cream); display:flex; flex-direction:column; align-items:center; gap:14px;
+  }
+  .qr-card .qr-box{
+    width:148px; height:148px; background:#fff; border:1px solid rgba(0,0,0,0.1); border-radius:3px;
+    display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;
+  }
+  .qr-box img{width:100%; height:100%; object-fit:contain; display:none;}
+  .qr-box .qr-placeholder{
+    position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:6px; background:
+      repeating-linear-gradient(45deg, rgba(0,0,0,0.04) 0 8px, transparent 8px 16px);
+    border:1.5px dashed rgba(0,0,0,0.22); border-radius:3px; margin:4px;
+  }
+  .qr-box .qr-placeholder svg{width:34px; height:34px; opacity:0.35;}
+  .qr-box .qr-placeholder span{font-size:0.6rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--ink-soft); font-weight:600;}
+  .qr-card .platform{font-size:0.92rem; font-weight:600; color:var(--navy);}
+  .qr-card .hint{font-size:0.76rem; color:var(--ink-soft); line-height:1.5;}
+
   /* BRIEFING CTA */
   .newsletter{
-    background:linear-gradient(135deg, var(--navy) 0%, #0E2140 100%); color:var(--cream); padding:90px 0;
+    background:linear-gradient(135deg, var(--navy) 0%, #28221A 100%); color:var(--cream); padding:90px 0;
     position:relative; overflow:hidden;
   }
   .newsletter::before{
     content:""; position:absolute; right:-80px; top:-80px; width:320px; height:320px;
     border:1px solid var(--line); border-radius:50%;
   }
-  .nl-inner{display:flex; justify-content:space-between; align-items:center; gap:40px; flex-wrap:wrap; position:relative; z-index:2;}
-  .nl-text{max-width:520px;}
-  .nl-text .kicker{font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); font-weight:600; margin-bottom:14px; display:block;}
+  .nl-inner{position:relative; z-index:2;}
+  .nl-text{max-width:640px; margin-bottom:44px;}
+  .nl-text .kicker{font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold-bright); font-weight:600; margin-bottom:14px; display:block;}
   .nl-text h2{font-size:clamp(1.7rem,3vw,2.3rem); font-weight:600; line-height:1.2;}
-  .nl-text p{margin-top:14px; color:#B8BFD0; font-size:0.98rem; line-height:1.5;}
-  form.nl-form{display:flex; gap:0; min-width:380px;}
+  .nl-text p{margin-top:14px; color:#A9B2C8; font-size:0.98rem; line-height:1.5;}
+  .format-row{display:flex; gap:16px; flex-wrap:wrap; margin-top:28px;}
+  .format-chip{
+    border:1px solid rgba(255,255,255,0.35); border-radius:2px; padding:10px 16px;
+    font-size:0.8rem; color:var(--gold-bright); letter-spacing:0.02em;
+  }
+  form.nl-form{display:flex; gap:0; max-width:520px;}
   form.nl-form input{
-    flex:1; padding:17px 20px; border:1px solid rgba(247,244,238,0.25); background:rgba(247,244,238,0.06);
+    flex:1; padding:17px 20px; border:1px solid rgba(255,255,255,0.25); background:rgba(255,255,255,0.06);
     color:var(--cream); font-family:'Inter',sans-serif; font-size:0.92rem; border-radius:2px 0 0 2px;
   }
-  form.nl-form input::placeholder{color:#8893A8;}
-  form.nl-form input:focus{outline:2px solid var(--gold); outline-offset:-2px;}
+  form.nl-form input::placeholder{color:#8B93AC;}
+  form.nl-form input:focus{outline:2px solid var(--gold-bright); outline-offset:-2px;}
   form.nl-form button{
-    background:var(--gold); color:var(--navy); border:none; padding:0 28px; font-weight:600;
+    background:var(--gold-bright); color:var(--navy); border:none; padding:0 28px; font-weight:600;
     font-size:0.85rem; letter-spacing:0.04em; text-transform:uppercase; cursor:pointer; border-radius:0 2px 2px 0;
     transition:background .2s;
   }
-  form.nl-form button:hover{background:var(--gold-bright);}
+  form.nl-form button:hover{background:var(--gold-dim);}
 
   /* FOOTER */
-  footer{background:#08152A; color:#9AA3B8; padding:64px 0 28px;}
+  footer{background:#0B1424; color:#98A0B8; padding:64px 0 28px;}
   .footer-grid{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; margin-bottom:56px;}
   .footer-grid .brand .mark{color:var(--cream);}
   footer p.about{margin-top:16px; font-size:0.88rem; line-height:1.6; max-width:280px;}
   .footer-col h4{font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--cream); margin-bottom:18px;}
-  .footer-col a{display:block; font-size:0.88rem; margin-bottom:12px; color:#9AA3B8; transition:color .2s;}
+  .footer-col a{display:block; font-size:0.88rem; margin-bottom:12px; color:#98A0B8; transition:color .2s;}
   .footer-col a:hover{color:var(--gold-bright);}
   .social-row{display:flex; gap:14px; margin-top:18px;}
   .social-row a{
-    width:36px; height:36px; border:1px solid rgba(247,244,238,0.18); border-radius:50%;
+    width:36px; height:36px; border:1px solid rgba(255,255,255,0.18); border-radius:50%;
     display:flex; align-items:center; justify-content:center; font-size:0.78rem; transition:border-color .2s, color .2s;
   }
-  .social-row a:hover{border-color:var(--gold); color:var(--gold-bright);}
+  .social-row a:hover{border-color:var(--gold-bright); color:var(--gold-bright);}
   .footer-bottom{
-    border-top:1px solid rgba(247,244,238,0.1); padding-top:24px; display:flex; justify-content:space-between;
+    border-top:1px solid rgba(255,255,255,0.1); padding-top:24px; display:flex; justify-content:space-between;
     font-size:0.8rem; flex-wrap:wrap; gap:10px;
   }
 
   /* RESPONSIVE */
   @media (max-width:900px){
     .navlinks{display:none;}
-    .program-grid, .founder-grid{grid-template-columns:1fr;}
-    .stats .wrap{grid-template-columns:repeat(2,1fr);}
+    .program-grid, .founder-grid, .process-grid{grid-template-columns:1fr;}
+    .process-step{border-right:none; border-bottom:1px solid rgba(0,0,0,0.08);}
+    .process-step:last-child{border-bottom:none;}
+    .credentials .wrap{grid-template-columns:repeat(2,1fr);}
+    .audience-item{border-right:none; border-bottom:1px solid rgba(255,255,255,0.18);}
     .footer-grid{grid-template-columns:1fr 1fr;}
-    .nl-inner{flex-direction:column; align-items:flex-start;}
-    form.nl-form{min-width:0; width:100%;}
+    .qr-grid{grid-template-columns:1fr; max-width:320px;}
   }
   @media (max-width:520px){
     .footer-grid{grid-template-columns:1fr;}
-    .hero{padding:80px 0 60px;}
+    .hero{padding:80px 0 0;}
     section{padding:70px 0;}
-    .video-caption{padding:20px;}
+    .video-placeholder{padding:16px;}
+    .credentials .wrap{grid-template-columns:1fr 1fr;}
+    form.nl-form{flex-direction:column;}
+    form.nl-form input{border-radius:2px; margin-bottom:10px;}
+    form.nl-form button{border-radius:2px; padding:15px;}
   }
 
   /* Focus visibility */
-  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--gold); outline-offset:2px;}
+  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--gold-bright); outline-offset:2px;}
 </style>
 </head>
 <body>
@@ -265,8 +393,8 @@
   <nav class="wrap">
     <div class="brand">
       <div>
-        <div class="mark">FLL</div>
-        <div class="tag">Future Leadership Lab</div>
+        <div class="mark">FULL</div>
+        <div class="tag">Future University Leadership Lab</div>
       </div>
     </div>
     <div class="navlinks">
@@ -281,28 +409,57 @@
 
 <section class="hero">
   <div class="wrap hero-inner">
-    <span class="eyebrow">Global Institutional Initiative · London & New Delhi</span>
+    <span class="eyebrow">An Independent Think Tank · Founded at the University of Oxford</span>
     <h1>Algorithms are evolving.<br><em>Is academic governance?</em></h1>
-    <div class="wave hero-wave" aria-hidden="true">
-      <span style="height:10px"></span><span style="height:18px"></span><span style="height:8px"></span>
-      <span style="height:22px"></span><span style="height:12px"></span><span style="height:20px"></span>
-      <span style="height:9px"></span><span style="height:16px"></span><span style="height:11px"></span>
-      <span style="height:24px"></span><span style="height:14px"></span><span style="height:7px"></span>
+    <div class="field-mark" aria-hidden="true">
+      <span class="tick"></span><span class="label">Founding Brief — Field Note 01</span><span class="rule"></span>
     </div>
-    <p class="lede">The Future University Leadership Lab bridges the critical chasm between exponential technological advancement and higher-education stewardship. We equip global university leaders, deans, and boards with the ethical, structural, and cognitive frameworks required to pilot institutions through the AI modern world.</p>
+    <p class="lede">The Future University Leadership Lab researches and convenes on the widening gap between exponential technological advancement and higher-education stewardship — equipping university leaders, deans, and boards with the ethical, structural, and cognitive frameworks required to pilot institutions through the AI era.</p>
     <div class="hero-actions">
       <a href="#briefing" class="btn-primary">Request Institutional Briefing</a>
       <a href="#domains" class="btn-ghost">Explore Framework</a>
     </div>
   </div>
+  <div class="audience">
+    <div class="wrap">
+      <div class="audience-item"><span class="dot" aria-hidden="true"></span><span class="txt">Vice-Chancellors &amp; Provosts</span></div>
+      <div class="audience-item"><span class="dot" aria-hidden="true"></span><span class="txt">Deans &amp; Faculty Boards</span></div>
+      <div class="audience-item"><span class="dot" aria-hidden="true"></span><span class="txt">Corporate L&amp;D Leadership</span></div>
+    </div>
+  </div>
 </section>
 
-<div class="stats">
+<div class="credentials">
+  <span class="kicker">Grounded In</span>
   <div class="wrap">
-    <div class="stat"><div class="num">03</div><div class="label">Core Domains</div></div>
-    <div class="stat"><div class="num">Global</div><div class="label">Oxbridge Pedigree</div></div>
-    <div class="stat"><div class="num">AI-First</div><div class="label">Governance Design</div></div>
-    <div class="stat"><div class="num">∞</div><div class="label">Institutional Resiliency</div></div>
+    <div class="credential">
+      <div class="name">University of Oxford</div>
+      <div class="desc">Dept. of Engineering Science</div>
+    </div>
+    <div class="credential">
+      <div class="name">Google HE Faculty</div>
+      <div class="desc">AI Fellowship</div>
+    </div>
+    <div class="credential">
+      <div class="name">Advance HE</div>
+      <div class="desc">Senior Fellow</div>
+    </div>
+    <div class="credential">
+      <div class="name">Teaching &amp; Research Design</div>
+      <div class="desc">Group Lead, Oxford Engineering</div>
+    </div>
+  </div>
+</div>
+
+<div class="recognition">
+  <div class="wrap">
+    <span>Global Ambassador, Queen Elizabeth Prize for Engineering</span>
+    <span class="sep" aria-hidden="true">·</span>
+    <span>Top 50 Women in Engineering, UK (2017)</span>
+    <span class="sep" aria-hidden="true">·</span>
+    <span>TEDx Cambridge Speaker</span>
+    <span class="sep" aria-hidden="true">·</span>
+    <span>Clinton Global Initiative Changemaker (2018)</span>
   </div>
 </div>
 
@@ -327,9 +484,9 @@
       <div class="program-card">
         <span class="phase">Domain 01</span>
         <h3>Institutional Governance</h3>
-        <p>Re-engineering structural leadership at the top. Transitioning legacy academic governance models into agile, high-velocity tech-literate systems.</p>
+        <p>Re-engineering structural leadership at the top. Transitioning legacy academic governance models into agile, tech-literate systems.</p>
         <ul>
-          <li>Cross-border dean onboarding & alignment</li>
+          <li>Cross-border dean onboarding &amp; alignment</li>
           <li>Board-level risk framework deployment</li>
           <li>Curriculum-to-industry horizon mapping</li>
         </ul>
@@ -337,22 +494,49 @@
       <div class="program-card">
         <span class="phase">Domain 02</span>
         <h3>Cognitive Stewardship</h3>
-        <p>Cultivating human executive intelligence that cannot be automated. Training leaders to retain deep ethical intuition, empathy, and crisis-management capabilities.</p>
+        <p>Cultivating human executive judgement that cannot be automated. Training leaders to retain ethical intuition, empathy, and crisis-management capability.</p>
         <ul>
           <li>Human-AI collaborative workflows</li>
-          <li>High-stakes ethical choice metrics</li>
-          <li>Neuro-leadership in highly automated environments</li>
+          <li>High-stakes ethical decision frameworks</li>
+          <li>Leadership practice for automated environments</li>
         </ul>
       </div>
       <div class="program-card">
         <span class="phase">Domain 03</span>
         <h3>Geopolitical Tech Policy</h3>
-        <p>Formulating real-world policy paradigms. Bridging the operational gap between corporate machine learning innovation and global university ecosystems.</p>
+        <p>Formulating real-world policy paradigms. Bridging the operational gap between AI innovation and global university ecosystems.</p>
         <ul>
-          <li>Strategic white papers & cross-border policy</li>
-          <li>Cross-institutional think-tank activation</li>
+          <li>Strategic white papers &amp; cross-border policy</li>
+          <li>Cross-institutional dialogue &amp; convening</li>
           <li>Public-private academic research pipelines</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Working Together</span>
+      <h2>How an Engagement Works</h2>
+      <p>A simple path from first conversation to ongoing partnership.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <span class="step-num">01 / Diagnostic</span>
+        <h3>Diagnostic Conversation</h3>
+        <p>A confidential conversation to understand your institution's leadership structure, AI posture, and governance priorities.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02 / Delivery</span>
+        <h3>Tailored Briefing or Workshop</h3>
+        <p>A briefing, keynote, or working session built around your board, faculty, or leadership cohort — not a generic template.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03 / Partnership</span>
+        <h3>Ongoing Advisory</h3>
+        <p>For institutions that want continuity, an ongoing advisory relationship through the next phase of implementation.</p>
       </div>
     </div>
   </div>
@@ -362,27 +546,38 @@
   <div class="wrap">
     <div class="section-head">
       <span class="kicker">The Governance Council</span>
-      <h2>Led by Practitioners & Researchers</h2>
-      <p>The Future Leadership Lab intersects elite technological capability with decades of deep global academic insights.</p>
+      <h2>Led by Practitioners &amp; Researchers</h2>
+      <p>The Future University Leadership Lab intersects elite technological capability with deep global academic insight.</p>
     </div>
     <div class="founder-grid">
-      <div class="founder-card">
-        <div class="initial">NH</div>
-        <h3>Dr. Nikita Hari</h3>
-        <span class="role">Founder & Principal Architect</span>
-        <p>Oxford and Cambridge post-doctoral research background. Internationally recognized electrical engineer, global policy strategist, and academic innovator.</p>
+      <div class="founder-card lead">
+        <!--
+          TO ADD A PHOTO: place an image file named "founder-photo.jpg" in this
+          same folder. The <img> below will pick it up automatically. If the
+          file is missing, the gold monogram is shown instead — nothing breaks.
+        -->
+        <div class="founder-photo">
+          <img src="founder-photo.jpg" alt="Dr. Nikita Hari" id="founderPhoto" onerror="this.style.display='none';">
+          <div class="initial-fallback" id="founderFallback">NH</div>
+        </div>
+        <div class="founder-body">
+          <h3>Dr. Nikita Hari</h3>
+          <span class="role">Founder &amp; Director</span>
+          <p>Dr. Hari holds a PhD in Electrical Engineering from the University of Cambridge (Nehru Cambridge Scholar) and completed a Schlumberger Faculty for Future Postdoctoral Fellowship at Oxford. She now leads the Teaching &amp; Research Design Support Group at Oxford's Department of Engineering Science, holds a Google HE Faculty AI Fellowship, and is a Senior Fellow of Advance HE. Co-founder of two EdTech ventures, she has delivered 60+ keynotes and reached over 120,000 people worldwide on the future of engineering education and AI-era leadership.</p>
+          <div class="tags">
+            <span>Cambridge PhD</span>
+            <span>Oxford Engineering Science</span>
+            <span>Google HE AI Fellow</span>
+            <span>Senior Fellow, Advance HE</span>
+            <span>Co-founder, EdTech</span>
+          </div>
+        </div>
       </div>
       <div class="founder-card">
-        <div class="initial">AG</div>
-        <h3>Academic Hub</h3>
-        <span class="role">Global Vice-Chancellors & Deans</span>
-        <p>Onboarding top-tier international institutional leaders to align international best practices, leveraging deep conduits like SRM University and global research consortiums.</p>
-      </div>
-      <div class="founder-card">
-        <div class="initial">EA</div>
-        <h3>Enterprise Axis</h3>
-        <span class="role">Corporate Tech Advisors</span>
-        <p>Connecting market innovators, public policy executives, and artificial intelligence developers to directly sync laboratory insight with market realities.</p>
+        <div class="initial">FT</div>
+        <h3>Building the Founding Team</h3>
+        <span class="role">Research &amp; Advisory Bench — In Formation</span>
+        <p>The Lab is currently led directly by Dr. Hari. A small bench of academic and industry advisors is being assembled through 2026 to broaden its research and convening capacity. Institutions interested in an early advisory role are welcome to reach out.</p>
       </div>
     </div>
   </div>
@@ -396,15 +591,68 @@
     </div>
     <div class="single-video-container">
       <div class="video-feature">
-        <!-- DEVELOPER NOTE: Replace 'lab-briefing.mp4' with the path to your source video file -->
-        <video width="100%" height="100%" controls style="width:100%; height:100%; object-fit:cover;">
+        <!--
+          TO ADD THE VIDEO: place a file named "lab-briefing.mp4" in this same
+          folder. The page checks automatically — if the file loads, the video
+          replaces this placeholder. If it isn't there yet, visitors simply see
+          a clean "coming soon" card instead of a broken player.
+        -->
+        <video id="briefingVideo" width="100%" height="100%" controls preload="metadata" style="object-fit:cover;">
           <source src="lab-briefing.mp4" type="video/mp4">
-          Your browser does not support the video tag.
         </video>
-        <div class="video-caption">
+        <div class="video-placeholder" id="videoPlaceholder">
+          <div class="play-ring" aria-hidden="true"></div>
+          <div class="ph-label">Keynote Video Coming Soon</div>
+          <div class="ph-sub">A recorded briefing on 21st-century higher-education stewardship will appear here.</div>
+        </div>
+        <div class="video-caption" id="videoCaption">
           <span class="kicker">Executive Keynote</span>
           <h3>A Vision for 21st Century Higher-Education Stewardship</h3>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="networking">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="kicker">Stay Connected</span>
+      <h2>Follow the Lab</h2>
+      <p>Scan to follow along — useful at conferences, on printed briefing materials, or on a business card.</p>
+    </div>
+    <div class="qr-grid">
+      <div class="qr-card">
+        <div class="qr-box">
+          <!--
+            TO ADD THIS QR CODE: place an image named "qr-instagram.png" in this
+            same folder. It will appear automatically in place of the dashed
+            placeholder below.
+          -->
+          <img src="qr-instagram.png" alt="Instagram QR code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="qr-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><path d="M14 14h3v3h-3zM20 14v3M14 20h3M20 20v.01"></path></svg>
+            <span>Add QR</span>
+          </div>
+        </div>
+        <div class="platform">Instagram</div>
+        <div class="hint">Drop <span class="mono">qr-instagram.png</span> in this folder to activate.</div>
+      </div>
+      <div class="qr-card">
+        <div class="qr-box">
+          <!--
+            TO ADD THIS QR CODE: place an image named "qr-linkedin.png" in this
+            same folder. It will appear automatically in place of the dashed
+            placeholder below.
+          -->
+          <img src="qr-linkedin.png" alt="LinkedIn QR code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="qr-placeholder">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><path d="M14 14h3v3h-3zM20 14v3M14 20h3M20 20v.01"></path></svg>
+            <span>Add QR</span>
+          </div>
+        </div>
+        <div class="platform">LinkedIn</div>
+        <div class="hint">Drop <span class="mono">qr-linkedin.png</span> in this folder to activate.</div>
       </div>
     </div>
   </div>
@@ -416,6 +664,11 @@
       <span class="kicker">Institutional Request</span>
       <h2>Secure an Executive Consultation</h2>
       <p>Initiate a baseline diagnostic assessment for your university board, corporate leadership panel, or executive collective.</p>
+      <div class="format-row">
+        <span class="format-chip">Keynote</span>
+        <span class="format-chip">Board Workshop</span>
+        <span class="format-chip">Ongoing Advisory</span>
+      </div>
     </div>
     <!-- Replace action link below with your specific intake form when ready -->
     <form class="nl-form" action="https://forms.gle/rQqvvwjUpXnEk75S8" method="get" target="_blank">
@@ -429,8 +682,8 @@
   <div class="wrap">
     <div class="footer-grid">
       <div class="brand">
-        <div class="mark">FLL</div>
-        <p class="about">Future Leadership Lab — Synthesizing human-centric stewardship, technology metrics, and high-level academic policy for global governing structures.</p>
+        <div class="mark">FULL</div>
+        <p class="about">Future University Leadership Lab — Synthesizing human-centric stewardship, technology metrics, and high-level academic policy for global governing structures.</p>
         <div class="social-row">
           <a href="#" aria-label="LinkedIn">in</a>
           <a href="#" aria-label="ResearchGate">RG</a>
@@ -457,11 +710,51 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Future Leadership Lab. All rights reserved.</span>
-      <span>London · New Delhi</span>
+      <span>© 2026 Future University Leadership Lab. All rights reserved.</span>
+      <span>Oxford, United Kingdom</span>
     </div>
   </div>
 </footer>
+
+<script>
+  // Founder photo: if it loaded successfully, hide the monogram fallback.
+  (function(){
+    var photo = document.getElementById('founderPhoto');
+    var fallback = document.getElementById('founderFallback');
+    if (photo.complete && photo.naturalWidth > 0) {
+      photo.style.display = 'block';
+      fallback.style.display = 'none';
+    }
+    photo.addEventListener('load', function(){
+      if (photo.naturalWidth > 0) {
+        photo.style.display = 'block';
+        fallback.style.display = 'none';
+      }
+    });
+  })();
+
+  // Briefing video: try to load it; show the real player only if the file exists.
+  (function(){
+    var video = document.getElementById('briefingVideo');
+    var placeholder = document.getElementById('videoPlaceholder');
+    var caption = document.getElementById('videoCaption');
+    function showVideo(){
+      video.style.display = 'block';
+      placeholder.style.display = 'none';
+      caption.classList.add('show');
+    }
+    function showPlaceholder(){
+      video.style.display = 'none';
+      placeholder.style.display = 'flex';
+      caption.classList.remove('show');
+    }
+    video.addEventListener('loadedmetadata', showVideo);
+    video.addEventListener('error', showPlaceholder);
+    // If no source resolves at all, the <video> itself fires 'error'.
+    showPlaceholder();
+    video.load();
+  })();
+</script>
 
 </body>
 </html>
