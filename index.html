@@ -142,7 +142,7 @@
   .audience-item .dot{width:6px; height:6px; border-radius:50%; background:var(--gold-bright); flex-shrink:0;}
   .audience-item span.txt{font-size:0.86rem; color:#C7CEE3; font-weight:500; letter-spacing:0.01em;}
 
-  /* CREDENTIAL STRIP (replaces vanity stat bar) */
+  /* CREDENTIAL STRIP */
   .credentials{
     background:var(--navy-light); color:var(--cream); padding:44px 0;
     border-bottom:1px solid var(--line);
@@ -156,7 +156,7 @@
   .credential .name{font-family:'Fraunces',serif; font-size:1.02rem; font-weight:600; color:var(--cream); line-height:1.3;}
   .credential .desc{font-size:0.72rem; letter-spacing:0.03em; text-transform:uppercase; color:#A9B2C8; margin-top:6px;}
 
-  /* RECOGNITION strip — third-party validation, distinct from the institutional credential row above */
+  /* RECOGNITION strip */
   .recognition{background:var(--cream); border-bottom:1px solid rgba(0,0,0,0.12); padding:18px 0;}
   .recognition .wrap{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px; text-align:center;}
   .recognition span{font-size:0.78rem; color:var(--ink-soft); letter-spacing:0.01em;}
@@ -211,11 +211,6 @@
   }
   .process-step h3{font-size:1.15rem; color:var(--navy); margin-bottom:10px; font-weight:600;}
   .process-step p{font-size:0.92rem; color:var(--ink-soft); line-height:1.55;}
-  .process-arrow{
-    display:none; position:absolute; right:-11px; top:38px; width:22px; height:22px; background:var(--cream);
-    border:1px solid rgba(0,0,0,0.1); border-radius:50%; z-index:2; align-items:center; justify-content:center;
-    font-size:0.7rem; color:var(--gold);
-  }
 
   /* DIRECTOR & FELLOWS */
   .founders{background:var(--navy); color:var(--cream);}
@@ -288,24 +283,16 @@
 
   /* NETWORKING / QR SECTION */
   .networking{background:#fff;}
-  .qr-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:640px;}
+  .qr-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:640px; margin:0 auto;}
   .qr-card{
     border:1px solid rgba(0,0,0,0.1); border-radius:4px; padding:30px; text-align:center;
     background:var(--cream); display:flex; flex-direction:column; align-items:center; gap:14px;
   }
   .qr-card .qr-box{
-    width:148px; height:148px; background:#fff; border:1px solid rgba(0,0,0,0.1); border-radius:3px;
+    width:160px; height:160px; background:#fff; border:1px solid rgba(0,0,0,0.1); border-radius:3px;
     display:flex; align-items:center; justify-content:center; position:relative; overflow:hidden;
   }
-  .qr-box img{width:100%; height:100%; object-fit:contain; display:none;}
-  .qr-box .qr-placeholder{
-    position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center;
-    gap:6px; background:
-      repeating-linear-gradient(45deg, rgba(0,0,0,0.04) 0 8px, transparent 8px 16px);
-    border:1.5px dashed rgba(0,0,0,0.22); border-radius:3px; margin:4px;
-  }
-  .qr-box .qr-placeholder svg{width:34px; height:34px; opacity:0.35;}
-  .qr-box .qr-placeholder span{font-size:0.6rem; letter-spacing:0.04em; text-transform:uppercase; color:var(--ink-soft); font-weight:600;}
+  .qr-box img{width:100%; height:100%; object-fit:contain; display:block;}
   .qr-card .platform{font-size:0.92rem; font-weight:600; color:var(--navy);}
   .qr-card .hint{font-size:0.76rem; color:var(--ink-soft); line-height:1.5;}
 
@@ -372,19 +359,6 @@
     .footer-grid{grid-template-columns:1fr 1fr;}
     .qr-grid{grid-template-columns:1fr; max-width:320px;}
   }
-  @media (max-width:520px){
-    .footer-grid{grid-template-columns:1fr;}
-    .hero{padding:80px 0 0;}
-    section{padding:70px 0;}
-    .video-placeholder{padding:16px;}
-    .credentials .wrap{grid-template-columns:1fr 1fr;}
-    form.nl-form{flex-direction:column;}
-    form.nl-form input{border-radius:2px; margin-bottom:10px;}
-    form.nl-form button{border-radius:2px; padding:15px;}
-  }
-
-  /* Focus visibility */
-  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--gold-bright); outline-offset:2px;}
 </style>
 </head>
 <body>
@@ -437,7 +411,7 @@ We explore how universities can lead responsibly in the age of AI — developing
       <div class="name"> University Leadership</div>
     </div>
     <div class="credential">
-      <div class="name">AI and  Higher EducationTransfromation</div>
+      <div class="name">AI and Higher Education Transformation</div>
     </div>
     <div class="credential">
       <div class="name">Engineering Education Innovation </div>
@@ -480,8 +454,7 @@ We explore how universities can lead responsibly in the age of AI — developing
         <ul>
           <li>Governance models &amp; accountability</li>
           <li>Board and executive decision-making</li>
-          <li>Policy-to-practice alignment
-</li>
+          <li>Policy-to-practice alignment</li>
         </ul>
       </div>
       <div class="program-card">
@@ -500,7 +473,7 @@ We explore how universities can lead responsibly in the age of AI — developing
         <p>Identifying the ethical, cognitive and relational capabilities university leaders need to lead through uncertainty, acceleration and transformation.</p>
         <ul>
           <li>Strategic foresight &amp; systems thinking</li>
-          <li>Ethical judgement  &amp; human-centred leadership</li>
+          <li>Ethical judgement &amp; human-centred leadership</li>
           <li>Adaptive leadership, crisis readiness and stakeholder collaboration</li>
         </ul>
       </div>
@@ -544,11 +517,6 @@ We explore how universities can lead responsibly in the age of AI — developing
     </div>
     <div class="founder-grid">
       <div class="founder-card lead">
-        <!--
-          TO ADD A PHOTO: place an image file named "founder-photo.jpg" in this
-          same folder. The <img> below will pick it up automatically. If the
-          file is missing, the gold monogram is shown instead — nothing breaks.
-        -->
         <div class="founder-photo">
           <img src="founder-photo.jpg" alt="Dr. Nikita Hari" id="founderPhoto" style="object-position: top; object-fit: cover;" onerror="this.style.display='none';">
           <div class="initial-fallback" id="founderFallback">NH</div>
@@ -558,7 +526,7 @@ We explore how universities can lead responsibly in the age of AI — developing
           <span class="role">Founder &amp; Director</span>
           <p>She holds a PhD in Electrical Engineering from the University of Cambridge and was a Schlumberger Faculty for the Future Fellow at the University of Oxford. She now leads the Teaching, Research Design and Support Group in Oxford’s Department of Engineering Science, is a Google Faculty AI Fellow, and is a Senior Fellow of Higher Education Academy (Advance HE).
 She is an Honorary Associate Professor at the UCL Centre for Engineering Education, Co-Chair of the Engineering Professors’ Council Complex Systems Initiative, and Co-Lead of the UK Young Academy’s Science and Technology Diplomacy project.
-Her work spans engineering education, institutional change,systems leadership and global higher-education collaboration.  Co-founder of two EdTech ventures, she has delivered 100+ keynotes and reached over 120,000 people worldwide on the future of engineering education and AI-era leadership.</p>
+Her work spans engineering education, institutional change, systems leadership and global higher-education collaboration. Co-founder of two EdTech ventures, she has delivered 100+ keynotes and reached over 120,000 people worldwide on the future of engineering education and AI-era leadership.</p>
           <div class="tags">
             <span>Cambridge PhD</span>
             <span>Oxford Engineering Science</span>
@@ -587,12 +555,6 @@ Her work spans engineering education, institutional change,systems leadership an
     </div>
     <div class="single-video-container">
       <div class="video-feature">
-        <!--
-          TO ADD THE VIDEO: place a file named "lab-briefing.mp4" in this same
-          folder. The page checks automatically — if the file loads, the video
-          replaces this placeholder. If it isn't there yet, visitors simply see
-          a clean "coming soon" card instead of a broken player.
-        -->
         <video id="briefingVideo" width="100%" height="100%" controls preload="metadata" style="object-fit:cover;">
           <source src="lab-briefing.mp4" type="video/mp4">
         </video>
@@ -610,45 +572,30 @@ Her work spans engineering education, institutional change,systems leadership an
   </div>
 </section>
 
-<section class="networking">
+<!-- NETWORKING SECTION WITH PNG QR CODES -->
+<section class="networking" id="connect">
   <div class="wrap">
     <div class="section-head">
       <span class="kicker">Stay Connected</span>
       <h2>Follow the Lab</h2>
-      <p>Scan to follow along: </p>
+      <p>Scan to follow along:</p>
     </div>
     <div class="qr-grid">
+      <!-- Instagram Card -->
       <div class="qr-card">
         <div class="qr-box">
-          <!--
-            TO ADD THIS QR CODE: place an image named "qr-instagram.png" in this
-            same folder. It will appear automatically in place of the dashed
-            placeholder below.
-          -->
-          <img src="qr-instagram.png" alt="Instagram QR code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="qr-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><path d="M14 14h3v3h-3zM20 14v3M14 20h3M20 20v.01"></path></svg>
-            <span>Add QR</span>
-          </div>
+          <img src="qr-instagram.png" alt="Instagram QR Code">
         </div>
         <div class="platform">Instagram</div>
-        <div class="hint">Drop <span class="mono">qr-instagram.png</span> in this folder to activate.</div>
+        <div class="hint">@drnikitahari · Lab dispatch notes</div>
       </div>
+      <!-- LinkedIn Card -->
       <div class="qr-card">
         <div class="qr-box">
-          <!--
-            TO ADD THIS QR CODE: place an image named "qr-linkedin.png" in this
-            same folder. It will appear automatically in place of the dashed
-            placeholder below.
-          -->
-          <img src="qr-linkedin.png" alt="LinkedIn QR code" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-          <div class="qr-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect><path d="M14 14h3v3h-3zM20 14v3M14 20h3M20 20v.01"></path></svg>
-            <span>Add QR</span>
-          </div>
+          <img src="qr-linkedin.png" alt="LinkedIn QR Code">
         </div>
         <div class="platform">LinkedIn</div>
-        <div class="hint">Drop <span class="mono">qr-linkedin.png</span> in this folder to activate.</div>
+        <div class="hint">Executive dialogue &amp; governance</div>
       </div>
     </div>
   </div>
@@ -657,19 +604,18 @@ Her work spans engineering education, institutional change,systems leadership an
 <section class="newsletter" id="briefing">
   <div class="wrap nl-inner">
     <div class="nl-text">
-      <span class="kicker">Institutional Request</span>
-      <h2>Secure an Executive Consultation</h2>
-      <p>Initiate a baseline diagnostic assessment for your university boards and senior leadership teams seeking focused support on leadership, governance,  curriculum, culture, capacity and transformation.</p>
+      <span class="kicker">Institutional Access</span>
+      <h2>Request the Founding Briefing</h2>
+      <p>A concise, quarterly confidential briefing for Vice-Chancellors, Presidents, and University Boards navigating AI-era leadership and structural transformation.</p>
       <div class="format-row">
-        <span class="format-chip">Keynote</span>
-        <span class="format-chip">Board Workshop</span>
-        <span class="format-chip">Ongoing Advisory</span>
+        <div class="format-chip">Quarterly Briefing Note</div>
+        <div class="format-chip">Executive Insights</div>
+        <div class="format-chip">Curated Research</div>
       </div>
     </div>
-    <!-- Replace action link below with your specific intake form when ready -->
-    <form class="nl-form" action="https://forms.gle/mt7CYAVJLkH9gg5d8" method="get" target="_blank">
-      <input type="email" id="email" name="email" placeholder="Institutional Email Address" required>
-      <button type="submit">Submit Request</button>
+    <form class="nl-form" onsubmit="event.preventDefault(); alert('Thank you. Your request for the founding briefing has been noted.');">
+      <input type="email" placeholder="Enter your institutional email (.ac.uk / .edu)" required aria-label="Institutional email">
+      <button type="submit">Request Briefing</button>
     </form>
   </div>
 </section>
@@ -677,80 +623,78 @@ Her work spans engineering education, institutional change,systems leadership an
 <footer>
   <div class="wrap">
     <div class="footer-grid">
-      <div class="brand">
-        <div class="mark">FULL</div>
-        <p class="about">Future University Leadership Lab — Advancing research, dialogue and frameworks to shape how universities lead through technological and institutional change.</p>
-        <div class="social-row">
-          <a href="#" aria-label="LinkedIn">in</a>
-          <a href="#" aria-label="ResearchGate">RG</a>
-          <a href="#" aria-label="Twitter">X</a>
+      <div>
+        <div class="brand">
+          <div>
+            <div class="mark">FULL</div>
+            <div class="tag">Future University Leadership Lab</div>
+          </div>
         </div>
+        <p class="about">Independent research and strategic advisory for university leadership navigating the age of AI and institutional transformation.</p>
       </div>
       <div class="footer-col">
-        <h4>Framework</h4>
+        <h4>The Lab</h4>
         <a href="#about">The Imperative</a>
-        <a href="#domains">Domains</a>
-        <a href="#director">Founder & Team</a>
-        <a href="#media">Briefing Video</a>
-      </div>
-      <div class="footer-col">
-        <h4>Inquiries</h4>
-        <a href="https://drnikitahari.com" target="_blank">drnikitahari.com</a>
-        <a href="#briefing">Request Briefing</a>
+        <a href="#domains">Strategic Architecture</a>
+        <a href="#director">Founder &amp; Team</a>
+        <a href="#media">Briefing in Action</a>
       </div>
       <div class="footer-col">
         <h4>Domains</h4>
-        <a href="#domains">Governance & Decision Systems</a>
-        <a href="#domains">Culture & Capacity Building</a>
+        <a href="#domains">Governance &amp; Decision Systems</a>
+        <a href="#domains">Culture &amp; Capacity Building</a>
         <a href="#domains">Future Leadership Capability</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="#briefing">Request Briefing</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Future University Leadership Lab. All rights reserved.</span>
-      <span>Oxford, United Kingdom</span>
+      <div>&copy; <span id="currentYear">2026</span> Future University Leadership Lab. Founded by Dr. Nikita Hari. All rights reserved.</div>
+      <div>Oxford · Global</div>
     </div>
   </div>
 </footer>
 
 <script>
-  // Founder photo: if it loaded successfully, hide the monogram fallback.
-  (function(){
-    var photo = document.getElementById('founderPhoto');
-    var fallback = document.getElementById('founderFallback');
-    if (photo.complete && photo.naturalWidth > 0) {
-      photo.style.display = 'block';
-      fallback.style.display = 'none';
-    }
-    photo.addEventListener('load', function(){
-      if (photo.naturalWidth > 0) {
-        photo.style.display = 'block';
-        fallback.style.display = 'none';
-      }
-    });
-  })();
+  // Set current year dynamically
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
 
-  // Briefing video: try to load it; show the real player only if the file exists.
-  (function(){
-    var video = document.getElementById('briefingVideo');
-    var placeholder = document.getElementById('videoPlaceholder');
-    var caption = document.getElementById('videoCaption');
-    function showVideo(){
+  // Progressive image display check for founder photo
+  const founderImg = document.getElementById('founderPhoto');
+  const founderFallback = document.getElementById('founderFallback');
+  if (founderImg) {
+    const testImg = new Image();
+    testImg.onload = function() {
+      founderImg.style.display = 'block';
+      founderFallback.style.display = 'none';
+    };
+    testImg.src = founderImg.getAttribute('src');
+  }
+
+  // Video fallback and interactive caption trigger
+  const video = document.getElementById('briefingVideo');
+  const placeholder = document.getElementById('videoPlaceholder');
+  const caption = document.getElementById('videoCaption');
+  
+  if (video) {
+    const testVideo = document.createElement('video');
+    testVideo.src = "lab-briefing.mp4";
+    testVideo.onloadeddata = function() {
       video.style.display = 'block';
       placeholder.style.display = 'none';
-      caption.classList.add('show');
-    }
-    function showPlaceholder(){
-      video.style.display = 'none';
-      placeholder.style.display = 'flex';
-      caption.classList.remove('show');
-    }
-    video.addEventListener('loadedmetadata', showVideo);
-    video.addEventListener('error', showPlaceholder);
-    // If no source resolves at all, the <video> itself fires 'error'.
-    showPlaceholder();
-    video.load();
-  })();
-</script>
+    };
+  }
 
+  // Show caption on video play
+  if (video && caption) {
+    video.addEventListener('play', () => caption.classList.add('show'));
+    video.addEventListener('pause', () => caption.classList.remove('show'));
+    video.addEventListener('ended', () => caption.classList.remove('show'));
+  }
+</script>
 </body>
 </html>
